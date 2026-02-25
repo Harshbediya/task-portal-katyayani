@@ -1,8 +1,8 @@
 # Task Management Portal (MERN Stack)
 
-**Candidate**: Harsh Bediya  
-**Assignment**: Task Management Portal Developer Evaluation  
-**Contact**: harshbedi3112@gmail.com
+**Candidate:** Harsh Bediya  
+**Assignment:** Task Management Portal Developer Evaluation  
+**Contact:** harshbedi3112@gmail.com
 
 A premium, glassmorphic Task Management Portal built with **NestJS** (Backend) and **React/Vite** (Frontend). This full-stack application utilizes **MongoDB** for persistence and **JWT authentication** to ensure secure, user-specific task management following scalable architecture principles.
 
@@ -56,27 +56,25 @@ A premium, glassmorphic Task Management Portal built with **NestJS** (Backend) a
     - `Dashboard`: The main layout that orchestrates state, filtering, and stats.
 - **Glassmorphic Design**: Uses vanilla CSS with modern properties like `backdrop-filter` and `radial-gradient` to achieve a premium, semi-transparent look.
 - **Performance**: Uses optimistic UI updates where possible (e.g., toggling status) for a lag-free experience.
-
 ## 📡 API Design [NON AI GENERATED]
+
 All endpoints are prefixed with `/api`.
 
 | Method | Endpoint | Description | Auth |
-|---|---|---|---|
-| POST | `/auth/register` | Register a new user | No |
-| POST | `/auth/login` | Login and get JWT token | No |
-| GET | `/auth/profile` | Get current user's profile | Yes |
-| GET | `/tasks` | Get all tasks for logged-in user (optional `?status=pending`) | Yes |
-| POST | `/tasks` | Create a new task (Title, Desc, Priority) | Yes |
-| PATCH | `/tasks/:id` | Update task details | Yes |
-| PATCH | `/tasks/:id/toggle` | Toggle task status (Pending <-> Completed) | Yes |
-| DELETE | `/tasks/:id` | Delete a task | Yes |
-
+|--------|---------|-------------|------|
+| POST | /auth/register | Register user | No |
+| POST | /auth/login | Login user | No |
+| GET | /auth/profile | Get profile | Yes |
+| GET | /tasks | Get tasks | Yes |
+| POST | /tasks | Create task | Yes |
+| PATCH | /tasks/:id | Update task | Yes |
+| PATCH | /tasks/:id/toggle | Toggle status | Yes |
+| DELETE | /tasks/:id | Delete task | Yes |
 ## 🧠 State Management [NON AI GENERATED]
 - **Auth State**: Managed using **React Context API** (`AuthContext.jsx`). This provides a global `user` object and `login/logout/register` functions. It also handles session persistence via `localStorage`.
 - **Task State**: Managed locally in `Dashboard.jsx` using `useState`. This keeps the data flow simple: `Dashboard` fetches data and passes it down to components, while child components trigger callbacks up to the parent.
 - **Filtering**: Implemented as a piece of state (`filter`) that triggers a re-fetch of tasks with the appropriate query parameter whenever it changes.
 
 ---
-**Candidate**: Harsh Bediya  
-**Contact**: harshbedi3112@gmail.com  
+
 **HR Contact**: Aditi Rajput (KATYAYANI ORGANICS)
